@@ -11,15 +11,13 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 ## Project team
 
-### John Doe
+### Luke Tan Zhi Yong
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/lukeetann.png" width="200px">
 
-[[homepage](http://www.comp.nus.edu.sg/~damithch)]
-[[github](https://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](https://github.com/lukeetann)]
 
-* Role: Project Advisor
+* Role: Developer
 
 ### Eugenio Manansala
 
@@ -39,12 +37,11 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 * Role: Developer
 * Responsibilities: Data
 
-### Jean Doe
+### Nicholas Ling
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/niclzy.png" width="200px">
 
-[[github](http://github.com/johndoe)]
-[[portfolio](team/johndoe.md)]
+[[github](http://github.com/niclzy)]
 
 * Role: Developer
 * Responsibilities: Dev Ops + Threading
