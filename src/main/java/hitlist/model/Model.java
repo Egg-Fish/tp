@@ -35,44 +35,44 @@ public interface Model {
     void setGuiSettings(GuiSettings guiSettings);
 
     /**
-     * Returns the user prefs' address book file path.
+     * Returns the user prefs' hit list file path.
      */
-    Path getAddressBookFilePath();
+    Path getHitListFilePath();
 
     /**
-     * Sets the user prefs' address book file path.
+     * Sets the user prefs' hit list file path.
      */
-    void setAddressBookFilePath(Path addressBookFilePath);
+    void setHitListFilePath(Path addressBookFilePath);
 
     /**
-     * Replaces address book data with the data in {@code addressBook}.
+     * Replaces hit list data with the data in {@code hitList}.
      */
-    void setAddressBook(ReadOnlyHitList addressBook);
+    void setHitList(ReadOnlyHitList hitList);
 
     /** Returns the HitList */
-    ReadOnlyHitList getAddressBook();
+    ReadOnlyHitList getHitList();
 
     /**
-     * Returns true if a person with the same identity as {@code person} exists in the address book.
+     * Returns true if a person with the same identity as {@code person} exists in the hit list.
      */
     boolean hasPerson(Person person);
 
     /**
      * Deletes the given person.
-     * The person must exist in the address book.
+     * The person must exist in the hit list.
      */
     void deletePerson(Person target);
 
     /**
      * Adds the given person.
-     * {@code person} must not already exist in the address book.
+     * {@code person} must not already exist in the hit list.
      */
     void addPerson(Person person);
 
     /**
      * Replaces the given person {@code target} with {@code editedPerson}.
-     * {@code target} must exist in the address book.
-     * The person identity of {@code editedPerson} must not be the same as another existing person in the address book.
+     * {@code target} must exist in the hit list.
+     * The person identity of {@code editedPerson} must not be the same as another existing person in the hit list.
      */
     void setPerson(Person target, Person editedPerson);
 

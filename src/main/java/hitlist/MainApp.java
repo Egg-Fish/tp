@@ -57,7 +57,7 @@ public class MainApp extends Application {
 
         UserPrefsStorage userPrefsStorage = new JsonUserPrefsStorage(config.getUserPrefsFilePath());
         UserPrefs userPrefs = initPrefs(userPrefsStorage);
-        HitListStorage hitListStorage = new JsonHitListStorage(userPrefs.getAddressBookFilePath());
+        HitListStorage hitListStorage = new JsonHitListStorage(userPrefs.getHitListFilePath());
         storage = new StorageManager(hitListStorage, userPrefsStorage);
 
         model = initModelManager(storage, userPrefs);

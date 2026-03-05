@@ -27,7 +27,7 @@ public interface Logic {
     /**
      * Returns the HitList.
      *
-     * @see Model#getAddressBook()
+     * @see Model#getHitList()
      */
     ReadOnlyHitList getAddressBook();
 

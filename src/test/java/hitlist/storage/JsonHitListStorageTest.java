@@ -57,7 +57,7 @@ public class JsonHitListStorageTest {
 
     @Test
     public void readAddressBook_invalidAndValidPersonHitList_throwDataLoadingException() {
-        assertThrows(DataLoadingException.class, () -> readHitList("invalidAndValidPersonAddressBook.json"));
+        assertThrows(DataLoadingException.class, () -> readHitList("invalidAndValidPersonHitList.json"));
     }
 
     @Test

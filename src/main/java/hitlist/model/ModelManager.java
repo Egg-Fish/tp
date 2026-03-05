@@ -19,21 +19,21 @@ import hitlist.model.person.Person;
 public class ModelManager implements Model {
     private static final Logger logger = LogsCenter.getLogger(ModelManager.class);
 
-    private final HitList addressBook;
+    private final HitList hitList;
     private final UserPrefs userPrefs;
     private final FilteredList<Person> filteredPersons;
 
     /**
      * Initializes a ModelManager with the given addressBook and userPrefs.
      */
-    public ModelManager(ReadOnlyHitList addressBook, ReadOnlyUserPrefs userPrefs) {
-        requireAllNonNull(addressBook, userPrefs);
+    public ModelManager(ReadOnlyHitList hitList, ReadOnlyUserPrefs userPrefs) {
+        requireAllNonNull(hitList, userPrefs);
 
-        logger.fine("Initializing with address book: " + addressBook + " and user prefs " + userPrefs);
+        logger.fine("Initializing with address book: " + hitList + " and user prefs " + userPrefs);
 
-        this.addressBook = new HitList(addressBook);
+        this.hitList = new HitList(hitList);
         this.userPrefs = new UserPrefs(userPrefs);
-        filteredPersons = new FilteredList<>(this.addressBook.getPersonList());
+        filteredPersons = new FilteredList<>(this.hitList.getPersonList());
     }
 
     public ModelManager() {
@@ -65,42 +65,42 @@ public class ModelManager implements Model {
     }
 
     @Override
-    public Path getAddressBookFilePath() {
-        return userPrefs.getAddressBookFilePath();
+    public Path getHitListFilePath() {
+        return userPrefs.getHitListFilePath();
     }
 
     @Override
-    public void setAddressBookFilePath(Path addressBookFilePath) {
-        requireNonNull(addressBookFilePath);
-        userPrefs.setAddressBookFilePath(addressBookFilePath);
+    public void setHitListFilePath(Path hitListFilePath) {
+        requireNonNull(hitListFilePath);
+        userPrefs.setHitListFilePath(hitListFilePath);
     }
 
     //=========== HitList ================================================================================
 
     @Override
-    public void setAddressBook(ReadOnlyHitList addressBook) {
-        this.addressBook.resetData(addressBook);
+    public void setHitList(ReadOnlyHitList hitList) {
+        this.hitList.resetData(hitList);
     }
 
     @Override
-    public ReadOnlyHitList getAddressBook() {
-        return addressBook;
+    public ReadOnlyHitList getHitList() {
+        return hitList;
     }
 
     @Override
     public boolean hasPerson(Person person) {
         requireNonNull(person);
-        return addressBook.hasPerson(person);
+        return hitList.hasPerson(person);
     }
 
     @Override
     public void deletePerson(Person target) {
-        addressBook.removePerson(target);
+        hitList.removePerson(target);
     }
 
     @Override
     public void addPerson(Person person) {
-        addressBook.addPerson(person);
+        hitList.addPerson(person);
         updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
     }
 
@@ -108,7 +108,7 @@ public class ModelManager implements Model {
     public void setPerson(Person target, Person editedPerson) {
         requireAllNonNull(target, editedPerson);
 
-        addressBook.setPerson(target, editedPerson);
+        hitList.setPerson(target, editedPerson);
     }
 
     //=========== Filtered Person List Accessors =============================================================
@@ -140,7 +140,7 @@ public class ModelManager implements Model {
         }
 
         ModelManager otherModelManager = (ModelManager) other;
-        return addressBook.equals(otherModelManager.addressBook)
+        return hitList.equals(otherModelManager.hitList)
                 && userPrefs.equals(otherModelManager.userPrefs)
                 && filteredPersons.equals(otherModelManager.filteredPersons);
     }
