@@ -304,26 +304,37 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 (For all use cases below, the **System** is the `HitList` and the **Actor** is the `user`, unless specified otherwise)
 
-**Use case: Delete a person**
+**Use case: Add a contact**
 
 **MSS**
 
-1.  User requests to list persons
-2.  AddressBook shows a list of persons
-3.  User requests to delete a specific person in the list
-4.  AddressBook deletes the person
+1.  User requests to add a contact
+2.  System creates the contact
+3.  System confirms that the contact has been created
 
     Use case ends.
 
 **Extensions**
 
-* 2a. The list is empty.
+* 1a. A contact with the same phone number already exists.
+  * 1a1. System shows an error message
 
-  Use case ends.
+    Use case ends.
 
-* 3a. The given index is invalid.
+**Use case: Delete a contact**
 
-    * 3a1. AddressBook shows an error message.
+**MSS**
+
+1.  User requests to delete a contact
+2.  System deletes the contact
+2.  System confirms that the contact has been deleted
+
+    Use case ends.
+
+**Extensions**
+
+* 1a. The requested contact does not exist.
+  * 1a1. System shows an error message
 
       Use case resumes at step 2.
       For the following use cases (unless otherwise specified):
@@ -438,7 +449,7 @@ Use case ends.
 4.  The company profile feature should support at least 50 company profiles without significant degradation in response time
 
 ### Contact Group Non-Functional Requirements
-1. The system should be able to support up to 500 contact groups 
+1.  The system should be able to support up to 500 contact groups 
 
 *{More to be added}* 
 
