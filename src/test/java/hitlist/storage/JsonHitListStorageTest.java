@@ -1,12 +1,12 @@
 package hitlist.storage;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static hitlist.testutil.Assert.assertThrows;
 import static hitlist.testutil.TypicalPersons.ALICE;
 import static hitlist.testutil.TypicalPersons.HOON;
 import static hitlist.testutil.TypicalPersons.IDA;
 import static hitlist.testutil.TypicalPersons.getTypicalHitList;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import java.io.IOException;
 import java.nio.file.Path;

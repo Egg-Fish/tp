@@ -1,8 +1,8 @@
 package hitlist.storage;
 
+import static hitlist.testutil.TypicalPersons.getTypicalHitList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static hitlist.testutil.TypicalPersons.getTypicalHitList;
 
 import java.nio.file.Path;
 

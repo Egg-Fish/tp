@@ -1,9 +1,9 @@
 package hitlist.storage;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static hitlist.storage.JsonAdaptedPerson.MISSING_FIELD_MESSAGE_FORMAT;
 import static hitlist.testutil.Assert.assertThrows;
 import static hitlist.testutil.TypicalPersons.BENSON;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
