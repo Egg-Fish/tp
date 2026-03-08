@@ -59,8 +59,9 @@
         "user-stories": "User stories",
         "use-cases": "Use cases",
         "non-functional-requirements": "Non-Functional Requirements",
-        "company-profile-non-functional-requirements": "Company Profile Non-Functional Requirements",
+        "contact-non-functional-requirements": "Contact Non-Functional Requirements",
         "contact-group-non-functional-requirements": "Contact Group Non-Functional Requirements",
+        "company-profile-non-functional-requirements": "Company Profile Non-Functional Requirements",
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
@@ -109,7 +110,7 @@
       "src": "UserGuide.md",
       "title": "User Guide",
       "headings": {
-        "ab-3-user-guide": "AB-3 User Guide",
+        "hitlist-user-guide": "HitList User Guide",
         "quick-start": "Quick start",
         "features": "Features",
         "viewing-help-help": "Viewing help : help",
@@ -133,7 +134,7 @@
       "src": "index.md",
       "title": "",
       "headings": {
-        "addressbook-level-3": "AddressBook Level-3"
+        "hitlist": "HitList"
       },
       "headingKeywords": {}
     },
