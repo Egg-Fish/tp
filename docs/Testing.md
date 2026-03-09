@@ -1,7 +1,7 @@
 ---
-  layout: default.md
-  title: "Testing guide"
-  pageNav: 3
+layout: default.md
+title: "Testing guide"
+pageNav: 3
 ---
 
 # Testing guide
@@ -35,7 +35,7 @@ This project has three types of tests:
 
 1. *Unit tests* targeting the lowest level methods/classes.<br>
    e.g. `hitlist.commons.StringUtilTest`
-1. *Integration tests* that are checking the integration of multiple code units (those code units are assumed to be working).<br>
+2. *Integration tests* that are checking the integration of multiple code units (those code units are assumed to be working).<br>
    e.g. `hitlist.storage.StorageManagerTest`
-1. Hybrids of unit and integration tests. These test are checking multiple code units as well as how the are connected together.<br>
+3. * Hybrids of unit and integration tests. These test are checking multiple code units as well as how the are connected together.<br>
    e.g. `hitlist.logic.LogicManagerTest`
