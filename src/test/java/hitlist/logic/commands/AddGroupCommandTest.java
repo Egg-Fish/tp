@@ -24,7 +24,6 @@ import hitlist.model.ReadOnlyUserPrefs;
 import hitlist.model.group.Group;
 import hitlist.model.group.GroupName;
 import hitlist.model.person.Person;
-import hitlist.testutil.PersonBuilder;
 import javafx.collections.ObservableList;
 
 public class AddGroupCommandTest {
@@ -52,7 +51,8 @@ public class AddGroupCommandTest {
         AddGroupCommand addGroupCommand = new AddGroupCommand(validGroup);
         ModelStub modelStub = new ModelStubWithGroup(validGroup);
 
-        assertThrows(CommandException.class, AddGroupCommand.MESSAGE_DUPLICATE_GROUP, () -> addGroupCommand.execute(modelStub));
+        assertThrows(CommandException.class,
+                     AddGroupCommand.MESSAGE_DUPLICATE_GROUP, () -> addGroupCommand.execute(modelStub));
     }
 
     @Test

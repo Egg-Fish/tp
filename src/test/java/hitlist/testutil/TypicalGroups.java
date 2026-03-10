@@ -1,10 +1,5 @@
 package hitlist.testutil;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import hitlist.model.HitList;
 import hitlist.model.group.Group;
 import hitlist.model.group.GroupName;
 
