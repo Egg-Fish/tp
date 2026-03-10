@@ -18,6 +18,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import hitlist.model.group.exceptions.DuplicateGroupException;
+import hitlist.model.group.exceptions.GroupNotFoundException;
 import hitlist.model.person.Person;
 import hitlist.model.person.exceptions.DuplicatePersonException;
 import hitlist.testutil.PersonBuilder;
@@ -116,6 +117,17 @@ public class HitListTest {
     public void addGroup_groupInAddressBook_throwsDuplicateGroupException() {
         hitList.addGroup(STUDENTS);
         assertThrows(DuplicateGroupException.class, () -> hitList.addGroup(STUDENTS));
+    }
+
+    @Test
+    public void deleteGroup_groupInAddressBook_success() {
+        hitList.addGroup(STUDENTS);
+        hitList.deleteGroup(STUDENTS);
+    }
+
+    @Test
+    public void deleteGroup_groupNotInAddressBook_throwsGroupNotFoundException() {
+        assertThrows(GroupNotFoundException.class, () -> hitList.deleteGroup(STUDENTS));
     }
 
     /**
