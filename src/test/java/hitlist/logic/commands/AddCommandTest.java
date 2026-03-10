@@ -21,6 +21,7 @@ import hitlist.model.HitList;
 import hitlist.model.Model;
 import hitlist.model.ReadOnlyHitList;
 import hitlist.model.ReadOnlyUserPrefs;
+import hitlist.model.group.Group;
 import hitlist.model.person.Person;
 import hitlist.testutil.PersonBuilder;
 import javafx.collections.ObservableList;
@@ -155,6 +156,16 @@ public class AddCommandTest {
 
         @Override
         public void updateFilteredPersonList(Predicate<Person> predicate) {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public boolean hasGroup(Group group) {
+            throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public void addGroup(Group group) {
             throw new AssertionError("This method should not be called.");
         }
     }
