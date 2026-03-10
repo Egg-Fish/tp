@@ -123,6 +123,11 @@ public class ModelManager implements Model {
         hitList.addGroup(group);
     }
 
+    @Override
+    public void deleteGroup(Group group) {
+        hitList.deleteGroup(group);
+    }
+
     //=========== Filtered Person List Accessors =============================================================
 
     /**

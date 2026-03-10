@@ -114,6 +114,14 @@ public class HitList implements ReadOnlyHitList {
         groups.add(g);
     }
 
+    /**
+     * Deletes the given group.
+     * {@code group} must already exist.
+     */
+    void deleteGroup(Group group) {
+        groups.remove(group);
+    }
+
     //// util methods
 
     @Override

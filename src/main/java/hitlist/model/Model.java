@@ -96,4 +96,10 @@ public interface Model {
      * {@code group} must not already exist.
      */
     void addGroup(Group group);
+
+    /**
+     * Deletes the given group.
+     * {@code group} must already exist.
+     */
+    void deleteGroup(Group group);
 }
